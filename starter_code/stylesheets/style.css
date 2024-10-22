@@ -387,6 +387,11 @@ nav {
   padding: 20px 40px;
 }
 
+#cta div {
+  display       : flex;
+  flex-direction: column;
+}
+
 #cta button {
   text-align    : center;
   text-transform: uppercase;
@@ -413,58 +418,70 @@ nav {
   }
 }
 
-/* footer */
+@media screen and (min-width: 1024px) and (max-width: 1440px) {
+  #cta div {
+    flex-direction : row;
+    justify-content: center;
+  }
 
-footer hr {
-  margin: 40px 20px 20px 20px;
-}
+  #cta button {
+    margin       : 5px 10px;
+    padding-left : 20px;
+    padding-right: 20px;
+  }
 
-#quick-links {
-  display       : flex;
-  flex-direction: column;
-}
+  /* footer */
 
-#quick-links li {
-  font-size      : 0.8em;
-  font-weight    : bold;
-  list-style-type: none;
-  padding        : 20px;
-}
+  footer hr {
+    margin: 40px 20px 20px 20px;
+  }
 
-#quick-links img {
-  padding-right: 10px;
-}
-
-#quick-links li:last-of-type {
-  color: var(--linkBlue);
-}
-
-#social-media {
-  display        : flex;
-  justify-content: space-between;
-  margin         : 40px 20px;
-}
-
-#social-media li {
-  list-style-type: none;
-}
-
-#social-media i {
-  font-size: 1.5em;
-}
-
-#small-bottom-text {
-  text-align: center;
-  color     : var(--grey);
-  padding   : 0 30px 30px;
-}
-
-@media screen and (min-width: 768px) {
   #quick-links {
-    flex-direction: row;
+    display       : flex;
+    flex-direction: column;
+  }
+
+  #quick-links li {
+    font-size      : 0.8em;
+    font-weight    : bold;
+    list-style-type: none;
+    padding        : 20px;
+  }
+
+  #quick-links img {
+    padding-right: 10px;
+  }
+
+  #quick-links li:last-of-type {
+    color: var(--linkBlue);
   }
 
   #social-media {
-    width: 35%;
+    display        : flex;
+    justify-content: space-between;
+    margin         : 40px 20px;
   }
-}
+
+  #social-media li {
+    list-style-type: none;
+  }
+
+  #social-media i {
+    font-size: 1.5em;
+  }
+
+  #small-bottom-text {
+    text-align: center;
+    color     : var(--grey);
+    padding   : 0 30px 30px;
+  }
+
+  @media screen and (min-width: 768px) {
+    #quick-links {
+      flex-direction: row;
+    }
+
+    #social-media {
+      width: 35%;
+    }
+  }
